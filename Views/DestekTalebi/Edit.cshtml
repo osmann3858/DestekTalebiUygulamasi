@@ -1,0 +1,43 @@
+﻿@model DestekTalebi
+
+<h2>Destek Talebini Düzenle</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="ID">
+    
+    <div class="form-group">
+        <label for="Konu">Konu</label>
+        <input type="text" class="form-control" id="Konu" asp-for="Konu">
+    </div>
+    <div class="form-group">
+        <label for="Durum">Durum</label>
+        <input type="text" class="form-control" id="Durum" asp-for="Durum">
+    </div>
+    <div class="form-group">
+        <label for="Mesaj">Mesaj</label>
+        <textarea class="form-control" id="Mesaj" asp-for="Mesaj"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="IslemYapan">İşlem Yapan</label>
+        <input type="text" class="form-control" id="IslemYapan" asp-for="IslemYapan">
+    </div>
+    <div class="form-group">
+        <label for="Oncelik">Öncelik</label>
+        <input type="text" class="form-control" id="Oncelik" asp-for="Oncelik">
+    </div>
+    <div class="form-group">
+        <label for="Tipi">Tipi</label>
+        <input type="text" class="form-control" id="Tipi" asp-for="Tipi">
+    </div>
+    <div class="form-group">
+        <label asp-for="Durum" class="control-label"></label>
+        @Html.DropDownListFor(model => model.Durum, Enum.GetValues(typeof(Durum)).Cast<Durum>().Select(v => new SelectListItem
+   {
+       Text = v.ToString(),
+       Value = ((int)v).ToString()
+   }), "Durum Seçiniz", new { @class = "form-control" })
+        <span asp-validation-for="Durum" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>

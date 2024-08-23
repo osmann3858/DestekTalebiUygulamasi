@@ -1,0 +1,106 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Baþlýk Stili */
+h1 {
+    font-size: 3em;
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablo Baþlýklarý */
+.table th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Tablo Satýrlarý */
+.table td {
+    background-color: #ffffff;
+    padding: 12px;
+    border-bottom: 1px solid #dddddd;
+    transition: background-color 0.3s ease;
+}
+
+.table tr:hover td {
+    background-color: #f1f1f1;
+}
+
+/* Buton Stilleri */
+.btn-primary {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    .btn-primary:hover {
+        background-color: #2980b9;
+        transform: translateY(-3px);
+    }
+
+/* Kart Stili */
+.card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+.card-header {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Animasyonlar ve Geçiþ Efektleri */
+.page-transition {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page-transition-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobil Uyum */
+@media only screen and (max-width: 600px) {
+    .table, .card {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 15px 0;
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+}

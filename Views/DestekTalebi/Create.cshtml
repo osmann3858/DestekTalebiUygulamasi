@@ -1,0 +1,42 @@
+﻿@model DestekTalebi
+
+<h2>Yeni Destek Talebi Oluştur</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label for="Konu">Konu</label>
+        <input type="text" class="form-control" id="Konu" asp-for="Konu">
+    </div>
+    
+    <div class="form-group">
+        <label for="Mesaj">Mesaj</label>
+        <textarea class="form-control" id="Mesaj" asp-for="Mesaj"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="IslemYapan">İşlem Yapan</label>
+        <input type="text" class="form-control" id="IslemYapan" asp-for="IslemYapan">
+    </div>
+    <div class="form-group">
+        <label for="Oncelik">Öncelik</label>
+        <select asp-for="Oncelik" class="form-control">
+            <option value="Düşük">Düşük</option>
+            <option value="Orta">Orta</option>
+            <option value="Yüksek">Yüksek</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Tipi">Tipi</label>
+        <select asp-for="Tipi" class="form-control">
+            <option value="Müşteri">Müşteri</option>
+            <option value="Teknik Ekip">Teknik Ekip</option>
+            
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Tarih" class="control-label"></label>
+        <input asp-for="Tarih" class="form-control" type="date" />
+        <span asp-validation-for="Tarih" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Oluştur</button>
+</form>

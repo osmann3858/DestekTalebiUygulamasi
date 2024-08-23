@@ -1,0 +1,29 @@
+﻿@model DestekTalebi
+<h1>Destek Talebi Detayları</h1>
+
+<div>
+    <label>Konu:</label>
+    <span>@Model.Konu</span>
+</div>
+<div>
+    <label>Durum:</label>
+    <span>@Model.Durum</span>
+</div>
+<div>
+    <label>Mesaj:</label>
+    <span>@Model.Mesaj</span>
+</div>
+<div>
+    <label>İşlem Yapan:</label>
+    <span>@Model.IslemYapan</span>
+</div>
+<div>
+    <label>Öncelik:</label>
+    <span>@Model.Oncelik</span>
+</div>
+<div>
+    <label>Tipi:</label>
+    <span>@Model.Tipi</span>
+</div>
+<a href="/DestekTalebi/Edit/@Model.ID">Düzenle</a>
+<a href="/DestekTalebi/Delete/@Model.ID">Sil</a>
